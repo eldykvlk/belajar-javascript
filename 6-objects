@@ -1,0 +1,65 @@
+//OBJECTS
+//object adalah sebuah variabel yang memiliki banyak value dengan propertinya
+//contoh object
+
+const car = {merk: "toyota", warna:"hitam", jumlah:2};
+
+//bisa juga untuk memasukan object ke dalam literal "{}"
+//buat objek
+const makan = {};
+//tambah properties
+makan.pertama = "nasi";
+makan.kedua = "sayur";
+makan.harga = 2000;
+
+console.log(makan);
+
+//bisa juga menggunakan kata kunci atau keyword "new Object()"
+//Contoh :
+
+// Buat Object
+const person = new Object();
+
+// Buat Properti
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+console.log(person);
+
+//Namun untuk lebih baik performanya dan cepat serta simpel eksekusi programnya
+//direkomendasikan dengan literal method atau "{}"
+
+//OBJECT PROPERTIES
+//properties sangat penting dalam object, dia bisa ditambahkan dihapus, diubah bahkan hanya bisa dibaca
+
+// Cara mengakses property :
+
+// objectName.property
+let age1 = person.age;
+
+//objectName["property"]
+let age2 = person["age"];
+
+//objectName[expression]
+let age3 = person[x];
+
+let jajan = {};
+jajan.nama = "permen";
+jajan.harga = 2000;
+jajan.tempat = "warung";
+console.log(jajan);
+
+//contoh akses cara 1 (variable.properti)
+console.log("dia suka jajan " + jajan.nama + " yang harga " + jajan.harga + " di " + jajan.tempat);
+//contoh akses cara 2 (variabel["array"])
+console.log(jajan["harga"]);  //harga kan number, mengapa di arraynya string(""), karena harga adalah properti bukan value
+//contoh akses cara 3 (expression)
+let nm = "nama";
+let hrg = "harga";
+let tpt = "tempat";
+console.log("jajanan itu adalah " + jajan[nm] + " harganya " + jajan[hrg] + " beli di " + jajan[tpt]);
+//jadi cara nomor 3 di atas adalah menginisialisasi properti dengan variabel baru untuk dipanggil valuenya
+
+
