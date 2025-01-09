@@ -62,4 +62,38 @@ let tpt = "tempat";
 console.log("jajanan itu adalah " + jajan[nm] + " harganya " + jajan[hrg] + " beli di " + jajan[tpt]);
 //jadi cara nomor 3 di atas adalah menginisialisasi properti dengan variabel baru untuk dipanggil valuenya
 
+//Delete Properties (menghapus properties)
+let sepeda = {
+    rantai : "bagus",
+    batangan : "solois",
+    jumlah : 1,
+}
+console.log(sepeda);
+delete sepeda.rantai;
+//bisa juga
+delete sepeda["rantai"]; //mengapa menggunakan string? karena rantai adalah value
 
+//Nested Objects (Objek yang bercabang)
+//Value pada properti dalam objek bisa mempunyai properti lagi
+//Contoh
+
+let pelajar = {
+    nama : "Eldy",
+    kelas : 10,
+    biodata : {
+        alamat : "bogor",
+        noHp : 8899,
+    }
+}
+
+//cara akses nested objects
+//cara 1
+pelajar.biodata.alamat;
+//cara 2
+pelajar.biodata["alamat"];
+//cara 3
+pelajar["biodata"]["alamat"];
+//cara 4
+let bio = "biodata";
+let alm = "alamat";
+pelajar[bio][alm];
