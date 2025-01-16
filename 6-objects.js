@@ -196,3 +196,88 @@ console.log(myString);
 
 //tampilkan dalam html
 document.getElementById("demo").innerHTML = myString;
+
+//Object Constructor functions
+//Terkadang kita membutuhkan untuk membuat banyak objek dengan tipe yang sama
+//untuk membuat tipe objek, kita memakai object construct function.
+//Contoh :
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+//dalam function constructor, "this" itu ngga punya value, value "this" akan menjadi obek baru jika objek baru, dibuat.
+
+//Sekarang kita bisa menggunakan new Person() untuk membuat banyak objek Person :
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+const mySister = new Person("Anna", "Rally", 18, "green");
+//jadi construktor parameternya menampung value diatas untuk dijadikan value properti.
+
+//Menambah properti ke sebuah object
+//contoh:
+hobiku.dirumah = "baca buku";
+//properti baru diatas akan ditambahkan di objek hobiku bukan person objek
+
+//Menambah properti ke Constructor itu tidak bisa kecuali mengunakan function prototype
+//contoh yang salah :
+Person.nationality = "Indo";
+//contoh yang benar:
+Person.prototype.nationality = "Indo";
+
+//Constructor Function Methods
+//Sebuah constructor bisa juga mempunyai methods
+//Contoh :
+function namaMurid(depan, belakang){
+    this.namaDepan = depan,
+    this.namaBelakang = belakang,
+    this.namaLengkap = function(){
+        return this.namaDepan + " " + this.namaBelakang;
+    };
+}
+
+//Menambahkan method ke sebuah objek
+//Contoh
+myMother.changeName = function (nama) {
+    this.lastName = nama;
+}
+
+//Menambahkan method ke sebuah objek harus menggunakan function prototype
+//Contoh :
+myMother.prototype.changeName = function (name) {
+  this.lastName = name;
+}
+
+myMother.changeName("Doe");
+
+//Daftar tipe Javascript yang ada pada dalam constructor :
+new Object()   // A new Object object
+new Array()    // A new Array object
+new Map()      // A new Map object
+new Set()      // A new Set object
+new Date()     // A new Date object
+new RegExp()   // A new RegExp object
+new Function() // A new Function object
+
+//Apakah kamu tahu?
+/*
+Use object literals {} instead of new Object().
+
+Use array literals [] instead of new Array().
+
+Use pattern literals /()/ instead of new RegExp().
+
+Use function expressions () {} instead of new Function().
+
+
+//Contoh terakhir : 
+"";           // primitive string
+0;            // primitive number
+false;        // primitive boolean
+
+{};           // object object
+[];           // array object
+/()/          // regexp object
+function(){}; // function
+*/
