@@ -114,7 +114,7 @@ subs1;
 //3.substr
 //substr() mirip dengan slice().
 //Perbedaannya adalah parameter kedua menentukan panjang bagian yang diekstrak.
-let substr1 = texti.substr(7,12);
+let substr1 = texti.substr(7,12);//Banana, Kiwi ada di antara 7 dan 12
 substr1;
 
 //Jika parameternya hanya satu maka akan mencetak akhir dari urutan string
@@ -124,3 +124,53 @@ substr2;
 //Jika parameternya negatif maka akan dihitung mulai dari akhir string ke urutan akhir
 let substr3 = texti.substr(-4);
 substr3;
+
+//CONVERTING TO UPPER AND LOWER CASE
+//Mengubah ke huruf besar dan huruf kecil
+
+/*
+1.Jika ingin mengubah ke huruf besar pakai toUpperCase();
+2.JIka ingin mengubah ke huruf kecil pakai toLowerCase();
+*/
+//Contoh :
+let huruf = "Hello world";
+let hurufBesar = huruf.toUpperCase();
+hurufBesar;
+let hurufKecil = huruf.toLowerCase();
+hurufKecil
+
+//JAVASCRIPT STRING CONCAT()
+//concat() menggabung dua string atau lebih 
+//Contoh :
+let concat1 = "Hello";
+let concat2 = "world";
+let hasilConcat = concat1.concat(" ",concat2);
+hasilConcat;
+//jadi concat juga bisa menggantikan operator + dalam menggabung string, seperti mengganti ini :
+let concatPlus = concat1 + " " + concat2;
+concatPlus;
+//NOTE:
+//Semua string methods mengembalikan string baru, dia tidak memodifikasi string asli atau asalnya
+//Singkatnya : string tidak bisa berubah, hanya terganti.
+
+//TRIM
+//JAVASCRPT STRING TRIM
+//Trim berfungsi menghilangka space kosong dari dua sisi string
+//Contoh :
+let textTrim = "   Hello world     ";
+let hasilTrim = textTrim.trim();
+hasilTrim;
+
+//JAVASCRIPT STRING trimStart()
+//Sama seperti method trim namun ini hanya menghapus space kosong pada awal string
+//Contoh :
+let textStart = "    Hello World     ";
+let hasilTrimStart = textStart.trimStart();
+hasilTrimStart;
+
+//JAVASCRIPT STRING trimEnd()
+//Menghapus space kosong pada akhir string
+//Contoh :
+let textEnd = "    Hello World    ";
+let hasilTrimEnd = textEnd.trimEnd();
+hasilTrimEnd;
