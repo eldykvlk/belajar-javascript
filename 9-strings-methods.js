@@ -174,3 +174,29 @@ hasilTrimStart;
 let textEnd = "    Hello World    ";
 let hasilTrimEnd = textEnd.trimEnd();
 hasilTrimEnd;
+
+//JAVASCRIPT PADDING
+//Padding adalah memberi string lapisan atau bantalan untuk diurut sampai ke panjang string yang diinginkan
+//Lalu memunculkan value saat diurutannya
+
+//padStart()
+// adalah metode pads string dari urutan awal string.
+let teksPadding = "5";
+let setelahPadding = teksPadding.padStart(4, "0")
+setelahPadding;
+//kode diatas menjelaskan value teksPadding akan muncul saat string "0" sudah berurutan sampai 4 urutan.
+
+//padEnd()
+//adalah metode pads string dari urutan akhir string.
+let teksPadding2 = "5";
+let Endpadding = teksPadding2.padEnd(4, "0");
+Endpadding;
+//kode diatas menjelaskan value teksPadding akan muncul saat string "0" sebelum berurutan sampai 4 urutan.
+
+//NOTE : padding adalah methods untuk string, jika ingin pad number. 
+//Maka convert ke string dahulu
+//Contoh :
+let numberPad = 5;
+let teksPadding3 = numberPad.toString();
+let hasilPadding = teksPadding3.padStart(4, "0");
+hasilPadding;
