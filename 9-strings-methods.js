@@ -88,7 +88,7 @@ text5[0] = "A";
 
 //1.Slice
 //mengekstrak sebuah string menjadi string baru
-//metode itu menggunakan 2 paraeter yaitu start position, dan end position (end tidak termasuk)
+//metode itu menggunakan 2 parameter yaitu start position, dan end position (end tidak termasuk)
 let texti = "Apple, Banana, Kiwi";
 let partSlice1 = texti.slice(7, 13);
 partSlice1;
@@ -200,3 +200,44 @@ let numberPad = 5;
 let teksPadding3 = numberPad.toString();
 let hasilPadding = teksPadding3.padStart(4, "0");
 hasilPadding;
+
+//JAVASCRIPT STRING repeat(count) parameter nomor pengulangan
+//repeat() mengembalikan string berupa jumlah salinan string
+//Contoh:
+let repeat = "hello world ";
+let hasilRepeat = repeat.repeat(2);
+hasilRepeat;
+
+//JAVASCRIPT STRING CONTENT replace()
+//Mengganti spesifik value menjadi value yang lain
+//Contoh
+let teksReplace = "Hello World dan World";
+let hasilReplace = teksReplace.replace("World", "dunia"); //huruf besar harus diperhatikan
+hasilReplace;
+//Replace hanya mengganti strng pertama yang diganti.
+//replace sangat sensitive terhadap kapital atau tidaknya 
+//huruf yang membuat dia tidak bisa berfungsi
+
+//agar tidak menjadikannya sensitive maka gunakan regular expression
+//dengan garis miring i (/i)
+//Contoh : 
+let teksReplace2 = "Hello World"
+let hasilReplace2 = teksReplace2.replace(/world/i, "dunia");
+hasilReplace2;
+
+//Untuk mengganti semua huruf (spesifik) yang sama, pakai /g (pencocokan Global)
+let teksReplace3 = "Hello World World World";
+let hasilReplace3 = teksReplace3.replace(/World/g, "Dunia");
+hasilReplace3;
+
+//JAVASCRIPT STRING split()
+//String bisa diconvert menjadi array dengan split() method
+//Contoh :
+/*
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|")    // Split on pipe
+*/
+let teksSplit = "Hello, World";
+let hasilSplit = teksSplit.split(",");
+hasilSplit;
