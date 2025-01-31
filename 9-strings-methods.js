@@ -230,6 +230,20 @@ let teksReplace3 = "Hello World World World";
 let hasilReplace3 = teksReplace3.replace(/World/g, "Dunia");
 hasilReplace3;
 
+//JAVASCRIPT STRING replaceAll()
+//berfungsi mengganti semua string
+//Contoh :
+let teksReplace4 = "kucing, kucing domba";
+let hasilReplace4 = teksReplace4.replaceAll("kucing", "ayam");
+hasilReplace4;
+
+//Jika ingin menggunakan regular expression (tidak spesifik)
+//gunakan /g
+//Contoh :
+let teksReplace5 = "kucing, kucing, domba";
+let hasilReplace5 = teksReplace5.replaceAll(/kucing/g, "domba");
+hasilReplace5;
+
 //JAVASCRIPT STRING split()
 //String bisa diconvert menjadi array dengan split() method
 //Contoh :
@@ -238,6 +252,8 @@ text.split(",")    // Split on commas
 text.split(" ")    // Split on spaces
 text.split("|")    // Split on pipe
 */
+
+
 let teksSplit = "Hello, World";
 let hasilSplit = teksSplit.split(",");
 hasilSplit;
